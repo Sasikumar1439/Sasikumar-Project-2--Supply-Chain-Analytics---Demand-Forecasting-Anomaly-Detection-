@@ -1,0 +1,4 @@
+Method,Anomalies_Found,Anomaly_Rate_Pct,Best_For
+Z-Score (|Z|>2.5),0,0.0,"Symmetric distributions, quick implementation"
+IQR (1.5×IQR),122,16.05,"Skewed distributions, robust to outliers"
+Isolation Forest (5%),38,5.0,"Multi-dimensional, non-linear anomalies"
