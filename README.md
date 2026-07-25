@@ -38,3 +38,47 @@ accurate demand forecasting in Week 3.
 Holiday season and promotion flags both measurably increase
 sales_units — these will be used as external regressors in
 the Prophet forecasting model in Week 3.
+
+---
+
+## Week 2 — Statistical Anomaly Detection ✅
+
+**Script:** `Week2_Anomaly_Detection.py`
+
+### Methods Implemented
+| Method | Anomalies Found | Rate | Recommended For |
+|--------|----------------|------|-----------------|
+| Z-Score (threshold ±2.5) | 0 at aggregate | 0% | Symmetric distributions |
+| IQR (1.5 × IQR fence) | 122 | 16% | Skewed distributions |
+| Isolation Forest (5%) | 38 | 5% | Multi-dimensional patterns |
+| Confirmed (2+ methods) | 19 | 2.5% | Production threshold |
+
+### Steps Performed
+- Loaded sales_data.csv and retail_store_inventory.csv
+- Built daily aggregated time series for units_sold and inventory_level
+- Extracted weather_condition and seasonality per day using mode()
+- Ran Z-Score, IQR and Isolation Forest anomaly detection
+- Confirmed anomalies where 2 or more methods agreed
+- Contextualized each anomaly using Epidemic, Promotion,
+  Weather and Seasonality columns
+- Classified anomaly types: Epidemic Spike/Drop,
+  Promotion Spike, Weather Drop, Unexplained
+
+### Key Findings
+- 94.7% of confirmed anomalies occurred during Epidemic days
+  (Epidemic column is near-perfect ground truth predictor)
+- IQR method alone flags 16% of days — too many false positives
+- Isolation Forest at 5% is the recommended default for Streamlit app
+- Clothing category had the most individual anomalies
+- Forecast error and anomaly days overlap — anomalies directly
+  reduce forecast accuracy (motivation for Week 3 Prophet model)
+
+### Output Files
+| File | Description |
+|------|-------------|
+| Week2_Anomaly_Dashboard.png | 6-panel anomaly detection dashboard |
+| Week2_PerCategory_Anomalies.png | Per-category Z-Score anomaly charts |
+| Week2_Inventory_Anomalies.png | Inventory level + forecast vs actual |
+| anomaly_results.csv | All confirmed anomalies with context |
+| anomaly_method_comparison.csv | Method benchmark comparison |
+| sql/anomaly_detection_queries.sql | SQL Z-Score + IQR + context queries |
