@@ -1,5 +1,8 @@
 # Infotact Solutions-Project-2--Supply-Chain-Analytics-Demand-Forecasting-Anomaly-Detection-
 ---
+Data sets:"C:\Users\Vinay\Downloads\demand_forecasting_dataset.csv"
+          "C:\Users\Vinay\Downloads\Supply_Chain_Analytics_project\sales_data.csv"
+          "C:\Users\Vinay\Downloads\retail_store_inventory.csv"
 
 ## Week 1 — Time-Series Preprocessing & Decomposition ✅
 
