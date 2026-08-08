@@ -86,3 +86,33 @@ the Prophet forecasting model in Week 3.
 | anomaly_results.csv | All confirmed anomalies with context |
 | anomaly_method_comparison.csv | Method benchmark comparison |
 | sql/anomaly_detection_queries.sql | SQL Z-Score + IQR + context queries |
+
+├── week_3_feature_engineering.py      # Data ingestion, cleaning, and advanced feature engineering
+├── week_4_inventory_optimization.py   # Machine learning classification pipeline for stockout risk
+├── cleaned_supply_chain_week3.csv     # Processed dataset output from Week 3
+├── stockout_feature_importance.png    # Feature importance visualization artifact
+└── README.md                          # Project documentation
+
+Week 3: Feature Engineering & KPI Analysis
+During Week 3, the focus was on data profiling, cleaning, handling missing values, and generating foundational supply chain metrics.
+
+Key Operations Performed:
+Data Cleansing & Formatting: Converted temporal records into datetime objects and extracted granular features (year_month, day_of_week).
+
+Risk Flag Creation: Engineered binary indicator columns like high_lead_time_risk (for lead times exceeding threshold limits) and stockout_risk (for critical inventory levels).
+
+Revenue & Rolling Metrics: Calculated total transaction revenues and 7-day rolling average product demand to capture seasonal trends.
+
+Warehouse Performance Aggregation: Summarized total sales, average inventory levels, and stockout incidents across individual warehouses.
+
+🤖 Week 4: Predictive Modeling & Inventory Risk Classification
+During Week 4, a machine learning classification pipeline was constructed to proactively forecast supply chain disruptions.
+
+Key Operations Performed:
+Model Selection: Deployed a Random Forest Classifier (scikit-learn) to predict inventory stockout risks based on historical attributes.
+
+Train-Test Splitting: Partitioned the dataset using an 80/20 train-test split with stratified sampling to preserve class balances.
+
+Evaluation Metrics: Assessed model performance using precision, recall, F1-score, confusion matrices, and ROC-AUC scoring.
+
+Feature Importance Analysis: Extracted and visualized the primary variables driving stockout vulnerabilities.
