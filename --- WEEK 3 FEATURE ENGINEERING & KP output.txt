@@ -1,0 +1,7 @@
+--- WEEK 3: FEATURE ENGINEERING & KPI ANALYSIS ---
+
+--- Summary Supply Chain KPIs ---
+Total Orders Analyzed: 5,000
+On-Time Delivery (OTD) Rate: 71.42%
+Average Profit Margin: 10.45%
+Average Lead Time Variance: 0.38 days
